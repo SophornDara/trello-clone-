@@ -1,0 +1,17 @@
+<script setup lang="ts">
+interface Item {
+  id: number
+  name: string
+}
+
+defineProps<{
+  items: Item[]
+}>()
+</script>
+<template>
+    <ul>
+        <li v-for="item in items" :key="item.id">
+            <slot name="item" :item="item">{{ item.name }}</slot>
+        </li>
+    </ul>
+</template>
