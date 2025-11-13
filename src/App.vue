@@ -1,3 +1,30 @@
+<script setup lang="ts">
+import { reactive } from 'vue'
+
+interface Card {
+  id: number
+  title: string
+  description: string
+}
+interface List {
+  id: number
+  title: string
+  cards: Card[]
+}
+
+const lists = reactive<List[]>([
+  {
+    id: 1,
+    title: 'The list',
+    cards: [
+      { id: 1, title: 'Title Card', description: 'Card Description' },
+      { id: 2, title: 'Title Card', description: 'Card Description' },
+      { id: 3, title: 'Title Card', description: 'Card Description' },
+    ],
+  },
+])
+</script>
+
 <template>
   <main class="p-5 font-sans">Welcome to the trello app!</main>
   <div class="flex gap-5 py-5 overflow-x-auto">
