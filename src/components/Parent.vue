@@ -10,7 +10,7 @@ const items = ref([
 
 <template>
   <div>
-    <h1>List of Items</h1>
+    <h1>List of...</h1>
     <Child :items="items">
       <template #item="{ item }">
         <strong class="text-5xl">{{ item.name }}</strong>
